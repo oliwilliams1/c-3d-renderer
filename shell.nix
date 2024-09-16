@@ -1,5 +1,5 @@
 with import <nixpkgs> {};
-stdenv.mkDerivation {
-  name = "myenv";
-  buildInputs = [ zlib ];
+let mcc-env = (callPackage /home/adam/mini_compile_commands {}).wrap stdenv;
+in (mkShell.override {stdenv = mcc-env;}) {
+   buildInputs = [ cmake gtest ];
 }

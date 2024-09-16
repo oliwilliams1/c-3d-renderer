@@ -11,6 +11,6 @@ if grep -q "error" <<< "$output"; then
   echo "Error during build!"
   echo "$output" | hilite "error" | hilite "{" | hilite "}" | hilite ";" | hilite "^" | hilite "In"
   exit 1
+else
+  ./result/bin/main.app
 fi
-
-./result/bin/main.app
