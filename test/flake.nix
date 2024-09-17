@@ -17,17 +17,18 @@
                                 name = "crow";
                                 derivation = pkgs.callPackage ./crow.nix {};
                                 cflags = [ "-DCROW_ENABLE_COMPRESSION" ];
-                            }
+                            };
                         })
                     ];
                 };
                 examples = pkgs.nozzle.add-subdirectory { path = ./examples; };
+                project = pkgs.nozzle.add-subdirectory { path = ./src; };
             in {
                 devShells = {
                     default = pkgs.mkShell { buildInputs = (with pkgs;[  ]); };
                 };
                 packages = {
-                    default = pkgs.hello;
+                    default = project.main;
                     # example-1 = examples.example-1;
                     # example-2 = examples.example-2;
                 } // examples;
