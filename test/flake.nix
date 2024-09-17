@@ -13,11 +13,6 @@
                     overlays = [
                         (self: super: { 
                             nozzle = nozzle-base.lib { inherit pkgs; }; 
-                            crow = self.nozzle.pkg-wrapper {
-                                name = "crow";
-                                derivation = pkgs.callPackage ./crow.nix {};
-                                cflags = [ "-DCROW_ENABLE_COMPRESSION" ];
-                            };
                         })
                     ];
                 };
