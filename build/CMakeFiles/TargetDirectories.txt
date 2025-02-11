@@ -1,0 +1,3 @@
+/home/adam/Programming/c-3d-renderer/build/CMakeFiles/executable.dir
+/home/adam/Programming/c-3d-renderer/build/CMakeFiles/edit_cache.dir
+/home/adam/Programming/c-3d-renderer/build/CMakeFiles/rebuild_cache.dir

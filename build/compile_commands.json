@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/adam/Programming/c-3d-renderer/build",
+  "command": "/etc/profiles/per-user/adam/bin/g++   -g -o CMakeFiles/executable.dir/main.cpp.o -c /home/adam/Programming/c-3d-renderer/main.cpp",
+  "file": "/home/adam/Programming/c-3d-renderer/main.cpp",
+  "output": "CMakeFiles/executable.dir/main.cpp.o"
+}
+]
