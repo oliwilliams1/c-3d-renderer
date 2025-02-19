@@ -1,6 +1,6 @@
-cmake
-
 cd build
+
+cmake ..
 
 make
 

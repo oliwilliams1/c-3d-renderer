@@ -16,10 +16,14 @@ file(GLOB MAIN
 )
 
 include_directories("vendor/glew/include")
+include_directories("vendor/glfw/include")
 
 # GLFW
 add_subdirectory("vendor/glfw")
 
-# print_all_variables()
-
 add_executable(executable ${MAIN})
+
+# Link the engine
+target_link_libraries(executable glew glfw)
+
+# print_all_variables()
