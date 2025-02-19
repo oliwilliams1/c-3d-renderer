@@ -12,14 +12,14 @@ macro(print_all_variables)
 endmacro()
 
 file(GLOB MAIN
-    "main.cpp"
+    "src/main.cpp"
 )
 
-set(glfw3 "/home/adam/packages/glfw-3.4")
-set(glfw3_DIR "/home/adam/packages/glfw-3.4")
+include_directories("vendor/glew/include")
 
-# target_link_libraries(glfw)
+# GLFW
+add_subdirectory("vendor/glfw")
 
-print_all_variables()
+# print_all_variables()
 
 add_executable(executable ${MAIN})
