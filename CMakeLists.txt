@@ -19,8 +19,8 @@ find_package(OpenGL REQUIRED)
 add_subdirectory("vendor/glfw")
 
 # GLEW
-add_subdirectory("vendor/glew/build/cmake")
-include_directories("vendor/glew/include")
+add_subdirectory("vendor/glew-cmake/build/cmake")
+include_directories("vendor/glew-cmake/include")
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
